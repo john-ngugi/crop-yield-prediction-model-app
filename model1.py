@@ -81,6 +81,9 @@ def main():
     plt.xlim(lims)
     plt.ylim(lims)
     _ = plt.plot(lims, lims)
+    
+    st.pyplot(a)
+    
     #we show the predicted and the actual results 
     st.write('our predictions are',test_predictions)
     st.write('actual values are',test_labels)
