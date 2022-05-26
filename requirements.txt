@@ -3,5 +3,5 @@ matplotlib
 numpy
 pandas
 seaborn
-tensorflow
+tensorflow==2.1.0
 
