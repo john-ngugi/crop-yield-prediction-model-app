@@ -2,5 +2,6 @@ matplotlib
 numpy
 pandas
 seaborn
+protobuf==3.19.4
 tensorflow
-protobuf==3.9.2
+
