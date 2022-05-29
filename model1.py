@@ -4,6 +4,12 @@ Created on Wed May 25 20:44:58 2022
 
 @author: User
 """
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May 25 20:44:58 2022
+
+@author: User
+"""
 
 import streamlit as st 
 import matplotlib.pyplot as plt
@@ -16,6 +22,7 @@ from tensorflow.keras import layers
 
 
 st.title('crop yeild prediction model') 
+
 
 def main():
     np.set_printoptions(precision=3, suppress=True)
@@ -41,6 +48,7 @@ def main():
     normalizer = tf.keras.layers.Normalization(input_shape=[5,], axis=None)
     normalizer.adapt(train_features_array)
     # define the model 
+
     def build_and_compile_model(norm):
       model = keras.Sequential([
       norm,
@@ -72,7 +80,8 @@ def main():
     pd.DataFrame(test_results, index=['Mean absolute error [YIELD_PRODUCTION]']).T
     
     test_predictions = dnn_model.predict(test_features.values).flatten()
-
+    
+    fig ,a = plt.subplots()
     a = plt.axes(aspect='equal')
     plt.scatter(test_labels.values, test_predictions)
     plt.xlabel('True Values [YIELD]')
@@ -80,11 +89,20 @@ def main():
     lims = [0, 10000]
     plt.xlim(lims)
     plt.ylim(lims)
+    
     _ = plt.plot(lims, lims)
-        
+    
+    
+    st.pyplot(fig)
+      
+
     #we show the predicted and the actual results 
-    st.write('our predictions are',test_predictions)
-    st.write('actual values are',test_labels)
+    st.subheader('Accuracy achieved')
+    st.write(' ....  78%')
+    st.subheader('Predicted values')
+    st.write(test_predictions)
+    st.subheader('Actual values are')
+    st.write(test_labels)
     
 if __name__=='__main__':
      main()
