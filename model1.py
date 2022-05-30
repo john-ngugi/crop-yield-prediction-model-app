@@ -80,7 +80,7 @@ def main():
     plt.ylim(lims)
     
     fig , _ = plt.subplots()
-     _ = plt.plot(lims, lims)
+    _ = plt.plot(lims, lims)
     
     
     st.pyplot(fig)
