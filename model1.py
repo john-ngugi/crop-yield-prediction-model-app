@@ -79,12 +79,8 @@ def main():
     plt.xlim(lims)
     plt.ylim(lims)
     
-    fig , _ = plt.subplots()
+    _ = plt.subplots()
     _ = plt.plot(lims, lims)
-    
-    
-    st.pyplot(fig)
-      
 
     #we show the predicted and the actual results 
     st.subheader('Accuracy')
