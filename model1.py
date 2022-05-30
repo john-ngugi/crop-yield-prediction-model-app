@@ -90,7 +90,7 @@ def main():
     plt.xlim(lims)
     plt.ylim(lims)
     
-     fig , _ = plt.plot(lims, lims)
+    fig , _ = plt.plot(lims, lims)
     
     
     st.pyplot(fig)
