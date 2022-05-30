@@ -81,7 +81,7 @@ def main():
     
     test_predictions = dnn_model.predict(test_features.values).flatten()
     
-    fig ,a = plt.subplots()
+    a = plt.subplots()
     a = plt.axes(aspect='equal')
     plt.scatter(test_labels.values, test_predictions)
     plt.xlabel('True Values [YIELD]')
@@ -90,15 +90,15 @@ def main():
     plt.xlim(lims)
     plt.ylim(lims)
     
-    _ = plt.plot(lims, lims)
+     fig , _ = plt.plot(lims, lims)
     
     
     st.pyplot(fig)
       
 
     #we show the predicted and the actual results 
-    st.subheader('Accuracy achieved')
-    st.write(' ....  78%')
+    st.subheader('Accuracy')
+    st.write('78.6%')
     st.subheader('Predicted values')
     st.write(test_predictions)
     st.subheader('Actual values are')
