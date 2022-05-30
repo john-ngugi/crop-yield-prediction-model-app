@@ -65,7 +65,7 @@ def main():
 
     test_results = {}
     test_results['dnn_model'] = dnn_model.evaluate(test_features.values, test_labels.values, verbose=0)
-    st.write(test_results['dnn_model])
+  
     pd.DataFrame(test_results, index=['Mean absolute error [YIELD_PRODUCTION]']).T
     
     test_predictions = dnn_model.predict(test_features.values).flatten()
