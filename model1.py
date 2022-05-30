@@ -1,15 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 25 20:44:58 2022
-
-@author: User
-"""
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 25 20:44:58 2022
-
-@author: User
-"""
 
 import streamlit as st 
 import matplotlib.pyplot as plt
