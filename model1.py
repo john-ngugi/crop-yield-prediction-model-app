@@ -14,7 +14,7 @@ st.title('crop yeild prediction model')
 
 def main():
     np.set_printoptions(precision=3, suppress=True)
-    url="https://raw.githubusercontent.com/john-ngugi/GEE_TEAM_WORK/main/katukefarm.csv"
+    url="https://raw.githubusercontent.com/john-ngugi/SSCM-AI-ML/main/katukefarm.csv"
     column_names = ['YEARS', 'YIELD_PRODUCTION','NDVI','SARVI', 'NPCRI', 'RVI', 'GCI']
     raw_dataset = pd.read_csv(url,delimiter=',', header=None, skiprows=1, names=column_names)
     st.dataframe(raw_dataset)
