@@ -83,8 +83,6 @@ def main():
     _ = plt.plot(lims, lims)
 
     #we show the predicted and the actual results 
-    st.subheader('Accuracy')
-    st.write('78.6%')
     st.subheader('Predicted values')
     st.write(test_predictions)
     st.subheader('Actual values are')
